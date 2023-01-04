@@ -96,7 +96,7 @@
 	&__title {
 		padding-top: 208px;
 		padding-bottom: 60px;
-		font-size: 49px;
+		font-size: 4.9rem;
 		font-weight: 600;
 		color: #fff;
 			@include __tablet_l{
@@ -134,7 +134,7 @@
 		}
 	}
 	&__pos {
-		padding-bottom: 168px;
+		margin-bottom: 109px
 		button{
 			margin-bottom: 30px
 		}
@@ -147,9 +147,9 @@
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;
 		&_btn{
-			position: absolute;
-			right: 15%;
-			top: 560px;
+			padding-top: 75px;
+    		position: relative;
+    		right: 0;
 			@include __tablet_l{
 				top: 430px;
 			}
@@ -182,87 +182,90 @@
     overflow: hidden;
     
 }
+.reg .slider__item{
+	display: grid;
+}
 
-.slider__item_{
-    &1{
-        min-width: 1024px;
-        max-width: 1024px;
+.slick{
+	
+	&-prev{
+		margin: 0 0 0 auto;
+		left: 0px;
+		right: 0px;
+		position: absolute;
+		margin-right: 0;
+		margin-left: auto;
 		@include __tablet_l{
-			min-width: 979px;
-			max-width: 979px;
-        }
-    
-        @include __tablet_m{
-			min-width: 768px;
-			max-width: 768px;
-        }
-    
-        @include __mobile_l{
-			min-width: 600px;
-			max-width: 600px;
-        }
-    
-        @include __mobile_m{
-			min-width: 480px;
-			max-width: 480px;
-        }
-        @include __mobile_s{
-			min-width: 350px;
-			max-width: 350px;
-        }
-    }
-    &2{
-        min-width: 1024px;
-        max-width: 1024px;
+			
+		}
+		@include __tablet_m{
+
+		}
+		@include __mobile_l{
+
+		}
+		@include __mobile_m{
+			
+		}
+		@include __mobile_s{
+			
+		}
+	}
+	&-next{
+		left: 0px;
+		position: absolute;
+		margin-right: 0;
+		margin-left: auto;
 		@include __tablet_l{
-			min-width: 979px;
-			max-width: 979px;
-        }
-    
-        @include __tablet_m{
-			min-width: 768px;
-			max-width: 768px;
-        }
-    
-        @include __mobile_l{
-			min-width: 600px;
-			max-width: 600px;
-        }
-    
-        @include __mobile_m{
-			min-width: 480px;
-			max-width: 480px;
-        }
-        @include __mobile_s{
-			min-width: 350px;
-			max-width: 350px;
-        }
-    }
-    &3{
-        min-width: 1024px;
-        max-width: 1024px;
-		@include __tablet_l{
-			min-width: 979px;
-			max-width: 979px;
-        }
-    
-        @include __tablet_m{
-			min-width: 768px;
-			max-width: 768px;
-        }
-    
-        @include __mobile_l{
-			min-width: 600px;
-			max-width: 600px;
-        }
-    
-        @include __mobile_m{
-			min-width: 480px;
-			max-width: 480px;
-        }
-        @include __mobile_s{
-			min-width: 350px;
-			max-width: 350px;
-        }
-    }
+			right: 50px;
+		}
+		@include __tablet_m{
+
+		}
+		@include __mobile_l{
+
+		}
+		@include __mobile_m{
+			
+		}
+		@include __mobile_s{
+			
+		}
+	}
+}
+
+
+[dir='rtl'] .slick{
+	&-prev{
+		right: 0px;
+    	left: auto;
+		&:before{
+			content: '';
+		}
+	}
+	&-next{
+		right: auto;
+		left: 0px;
+		&:before{
+			content: '';
+		}
+	}
+}
+
+.slick{
+	&-prev{
+		left: 0px;
+		&:before
+		{
+			content: '';
+		}
+	}
+	&-next
+	{
+		right: 0px; 
+		&:before
+		{
+			content: '';
+		}
+	}
 }
